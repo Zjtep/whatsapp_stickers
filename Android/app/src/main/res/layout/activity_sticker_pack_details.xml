@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="@dimen/preview_side_margin"
+    android:weightSum="1"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -141,4 +142,14 @@
                 android:text="@string/add_to_whatsapp" />
         </FrameLayout>
     </FrameLayout>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_id">
+    </com.google.android.gms.ads.AdView>
 </LinearLayout>
