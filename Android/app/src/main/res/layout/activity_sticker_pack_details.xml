@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="@dimen/preview_side_margin"
-    android:weightSum="1"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -105,6 +104,26 @@
         android:layout_marginEnd="@dimen/preview_side_margin"
         android:layout_marginRight="@dimen/preview_side_margin">
 
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_id">
+        </com.google.android.gms.ads.AdView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/preview_side_margin"
+        android:layout_marginLeft="@dimen/preview_side_margin"
+        android:layout_marginEnd="@dimen/preview_side_margin"
+        android:layout_marginRight="@dimen/preview_side_margin">
+
         <TextView
             android:id="@+id/already_added_text"
             android:layout_width="match_parent"
@@ -143,13 +162,13 @@
         </FrameLayout>
     </FrameLayout>
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_id">
-    </com.google.android.gms.ads.AdView>
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/adView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        ads:adSize="BANNER"-->
+<!--        ads:adUnitId="@string/banner_id">-->
+<!--    </com.google.android.gms.ads.AdView>-->
 </LinearLayout>
